@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box;
+    /* font-size: 16px; */
+}
+
+a{
+    font-family: 'Oxanium', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Oxanium', sans-serif;
+    font-weight: 600;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+body {
+  padding-top: 70px;
+}
+
+.nav-bar{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    top: 0;
+    z-index: 1;
+    justify-content: space-evenly;
+    padding: 10px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.731);
+}
+
+.nav-bar a{
+    color: black;
+    text-decoration: none;
+    position: relative;
+    padding: 12px;
+    font-size: 24px;
+}
+
+.nav-bar a::after{
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    width: 0;
+    height: 2px;
+    background-color: rgb(185, 137, 40);
+    transition: width 0.3s ease-in;
+}
+
+.nav-bar a:hover::after{
+    width: 100%;
+}
+
+.logo{
+    width: 100px;
+    height: 50px;
+}
+
+.cart-icon{
+    margin-top: 10px;
+    height: 40px;
+}
+
+.navbar-button{
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    padding: 0px 20px 0px 20px;
+    background-color: rgb(185, 137, 40);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.gallery-nav{
+    background-color: antiquewhite;
+}
+
+.gallery-nav h2{
+    padding: 20px;
+}
+
+input{
+    display: none;
+}
+
+.gallery-container{
+    width: 100%;
+    text-align: center;
+}
+
+.gallery-container h1{
+    font-weight: normal;
+    font-size: 35px;
+    position: relative;
+    margin: 40px 0;
+}
+
+.gallery-container h1::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: crimson;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        width: 100px;
+    }
+    50%{
+        width: 200px;
+    }
+    100%{
+        width: 100px;
+    }
+}
+
+.top-content{
+    background-color: rgb(243,243,243);
+    width: 90%;
+    margin: 0 auto 20px auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px lightgray;
+}
+
+h3{
+    height: 100%;
+    background-color: lightgray;
+    line-height: 60px;
+    padding: 0 50px;
+    color: white;
+}
+
+label{
+    display: inline-block;
+    height: 100%;
+    padding: 0 10px;
+    margin: 0 20px;
+    line-height: 60px;
+    font-size: 18px;
+    color: gray;
+    cursor: pointer;
+    transition: color .5s;
+}
+
+label:hover{
+    color: black;
+}
+
+.photo-gallery{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+}
+
+.pic{
+    transform: scale(0);
+    opacity: 0;
+    position: absolute;
+    transition: 0.5s;
+    height: 260px;
+}
+
+.pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 16px 16px 20px lightgrey;
+    transition: transform 0.4s ease;
+} 
+
+.pic img:hover{
+    transform: translateY(-10px);
+}
+
+#check1:checked ~ .gallery-container .photo-gallery .pic,
+#check2:checked ~ .gallery-container .photo-gallery .denverperfume,
+#check3:checked ~ .gallery-container .photo-gallery .denverdeodrant,
+#check4:checked ~ .gallery-container .photo-gallery .ourusers{
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    background-color: ghostwhite;
+    margin-top: 4%;
+}
+
+.footer-text{
+    padding: 50px;
+    line-height: 2;
+}
+
+.footer-socialmedia img{
+    margin-top: 2%;
+    width: 10%;
+    padding: 6px;
+}
+
+.up-arrow{
+    position: fixed;
+    bottom: 50px;
+    right: 36px;
+    width: 50px;
+    cursor: pointer;
+    animation: updown 1.6s ease-in-out infinite;
+}
+
+@keyframes updown {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}

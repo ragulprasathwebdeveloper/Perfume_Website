@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a{
+    font-family: 'Oxanium', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Oxanium', sans-serif;
+    font-weight: 600;
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+body {
+  padding-top: 70px;
+}
+
+.nav-bar{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    top: 0;
+    z-index: 1;
+    justify-content: space-evenly;
+    padding: 10px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.731);
+}
+
+.nav-bar a{
+    color: black;
+    text-decoration: none;
+    position: relative;
+    padding: 12px;
+    font-size: 24px;
+}
+
+.nav-bar a::after{
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    width: 0;
+    height: 2px;
+    background-color: rgb(185, 137, 40);
+    transition: width 0.3s ease-in;
+}
+
+.nav-bar a:hover::after{
+    width: 100%;
+}
+
+.logo{
+    width: 100px;
+    height: 50px;
+}
+
+.cart-icon{
+    margin-top: 10px;
+    height: 40px;
+}
+
+.navbar-button{
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    padding: 0px 20px 0px 20px;
+    background-color: rgb(185, 137, 40);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.banner1{
+    width: 100%;
+    margin: 0%;
+    margin-top: 10px;
+}
+
+.aboutus{
+    position: relative;
+}
+
+.aboutus-text{
+    position: absolute;
+    top: 28%;
+    color: rgb(152, 249, 5);
+    max-width: 800px;
+    left: 6%;
+}
+
+.aboutus-text h1{
+    font-size: 46px;
+    margin: 20px;
+}
+
+.aboutus-text p{
+    font-size: 20px;
+    line-height: 2;
+    margin: 20px;
+}
+
+.story{
+    margin: 66px;
+    text-align: center;
+}
+
+.story h1{
+    margin: 30px;
+}
+
+.story p{
+    font-size: 20px;
+    margin: 40px;
+    line-height: 1.6;
+}
+
+.banner2{
+    width: 100%;
+    margin: 0%;
+    max-height: 660px;
+}
+
+.crafted{
+    position: relative;
+}
+
+.crafted-text{
+    position: absolute;
+    color: rgb(132, 0, 255);
+    margin: 50px;
+    top: 16%;
+    left: 50%;
+    font-size: 22px;
+    line-height: 1.6;
+}
+
+.crafted-text h1{
+    margin: 20px;
+}
+
+.crafted-text li{
+    margin: 20px;
+    left: 40%;
+}
+
+.different-whole{
+    display: flex;
+    margin: 40px 0px 0px 0px;
+    background-image: url(images/background-aboutus.jpg);
+    margin-top: 6%;
+}
+
+.different{
+    margin: 80px 60px 50px 80px;
+    padding: 40px 20px 80px 20px;
+    line-height: 40px;
+    color: rgb(111, 255, 1);
+    font-size: 22px;
+}
+
+.different h1{
+    margin: 0px 0px 30px 0px;
+}
+
+.different-whole img{
+    height: 100%;
+    width: 100%;
+}
+
+.employee{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr); 
+}
+
+.employee-head{
+    text-align: center;
+    margin: 40px;
+    font-size: 18px;
+}
+
+.employee-head p{
+    margin: 20px;
+}
+
+.employee-card{
+    height: 100%; 
+    margin: 20px;
+    text-align: center;
+    box-shadow: 10px 20px 10px rgb(152, 152, 152);
+}
+
+.employee-card:hover{
+    transform: translateY(-10px);
+}
+
+.employee-card h3,h4{
+    margin: 10px;
+}
+
+#employee-img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.ourvision{
+    margin: 30px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.ourvision-display{
+    display: grid;
+    grid-template-columns: repeat(2,4fr);
+}
+
+.ourvision-card{
+    margin: 26px 10px 10px 10px;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 12px;
+    line-height: 1.6;
+    /* background-color: beige; */
+    background-color: black;
+    color: white;
+    box-shadow: 10px 20px 20px rgb(115, 115, 115);
+}
+
+.ourvision-card:hover{
+    transform: translateY(-10px);
+    /* box-shadow: 14px 20px 20px rgb(195, 136, 19); */
+    background-color: white;
+    color: black;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    background-color: ghostwhite;
+    margin-top: 4%;
+}
+
+.footer-text{
+    padding: 50px;
+    line-height: 2;
+}
+
+.footer-socialmedia img{
+    margin-top: 2%;
+    width: 10%;
+    padding: 6px;
+}
+
+.up-arrow{
+    position: fixed;
+    bottom: 50px;
+    right: 36px;
+    width: 50px;
+    cursor: pointer;
+    animation: updown 1.6s ease-in-out infinite;
+}
+
+@keyframes updown {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
